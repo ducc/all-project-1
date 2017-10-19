@@ -27,7 +27,7 @@ class Game:
         board = self.board.tiles
 
     def start(self):
-        board_size = self.board.size
+        board_size = self.board.SIZE
         
         while True:
             chosen_tile = self.ask_for_tile()

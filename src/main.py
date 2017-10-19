@@ -1,7 +1,7 @@
 from Board import Board
 from Game import Game
 
-board = Board(3)
+board = Board()
 players = ['X', 'O']
 
 game = Game(board, players)
