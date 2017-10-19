@@ -12,8 +12,13 @@ class Game:
         self.current_player = 0
         self.playing = True
 
+    def get_player(self):
+        """Returns the current player's symbol"""
+
+        return self.players[self.current_player]
+
     def __ask_for_tile(self):
-        user_input = input("player " + str(self.current_player + 1) + ":\n")
+        user_input = input("player " + self.get_player() + ":\n")
 
         if user_input == "exit":
             return None
@@ -66,7 +71,7 @@ class Game:
                 print("tile is out of bounds!")
                 chosen_tile = self.__ask_for_tile()
 
-            player = self.players[self.current_player]
+            player = self.get_player()
             self.board.set_tile(chosen_tile - 1, player)
             
             self.board.clear()
