@@ -11,8 +11,8 @@ University multiplayer tic-tac-toe project!
 ### Server
 SOON
 
-### License
+## License
 All rights reserved.
 
-### Contributing
+## Contributing
 No thank you!
