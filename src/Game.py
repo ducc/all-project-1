@@ -39,6 +39,13 @@ class Game:
             if checks.check_win_horizontal(board, i):
                 return True
 
+        # check diagonal wins
+        if checks.check_win_diagonal_lr(board):
+            return True
+
+        if checks.check_win_diagonal_rl(board):
+            return True
+
     def start(self):
         board_size = self.board.SIZE
         
