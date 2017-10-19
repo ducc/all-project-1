@@ -1,3 +1,5 @@
+import checks
+
 class Game:
     def __init__(self, board, players):
         self.board = board
@@ -24,7 +26,18 @@ class Game:
             self.current_player = 0
 
     def check_if_won(self):
+        iterations = self.board.SIZE - 1
         board = self.board.tiles
+
+        # check vertical wins
+        for j in range(iterations):
+            if checks.check_win_vertical(board, j):
+                return True
+        
+        # check horizontal wins
+        for i in range(iterations):
+            if checks.check_win_horizontal(board, i):
+                return True
 
     def start(self):
         board_size = self.board.SIZE
@@ -43,5 +56,9 @@ class Game:
             
             self.board.clear()
             self.board.draw()
+
+            if self.check_if_won():
+                print("you won!! :)")
+                break
             
             self.choose_next_player()

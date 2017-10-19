@@ -1,6 +1,4 @@
-from os import system
-from os import name as osname
-
+import os
 
 class Board:
     SIZE = 3
@@ -40,10 +38,10 @@ class Board:
                 self.print_devider()
 
     def clear(self):
-        if osname is "nt": # check if the os is windows
-            system("cls")
+        if os.name is "nt": # check if the os is windows
+            os.system("cls")
         else:
-            system("clear")
+            os.system("clear")
 
     def set_tile(self, tile, value):
         self.tiles[tile // self.SIZE][tile % self.SIZE] = value
