@@ -1,5 +1,6 @@
 import os
 
+
 class Board:
     SIZE = 3
 

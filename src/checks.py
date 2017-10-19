@@ -13,7 +13,7 @@ def check_win_horizontal(board, i):
     return True
 
 def check_win_diagonal_lr(board):
-    return board[0][0] is board[1][1] and board[0][0] is board[2][2]
+    return board[0][0] is board[1][1] and board[1][1] is board[2][2]
 
 def check_win_diagonal_rl(board):
-    return board[2][0] is board[1][1] and board[2][0] is board[0][2]
+    return board[2][0] is board[1][1] and board[1][1] is board[0][2]
