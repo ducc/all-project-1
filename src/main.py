@@ -1,8 +1,8 @@
 from Board import Board
 from Game import Game
 
-board = Board()
-players = ['X', 'O']
+BOARD = Board()
+PLAYERS = ['X', 'O']
 
-game = Game(board, players)
-game.start()
+GAME = Game(BOARD, PLAYERS)
+GAME.start()

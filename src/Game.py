@@ -32,7 +32,7 @@ class Game:
         while True:
             chosen_tile = self.ask_for_tile()
 
-            if chosen_tile == None:
+            if chosen_tile is None:
                 break
 
             while chosen_tile < 1 or chosen_tile > board_size * board_size:

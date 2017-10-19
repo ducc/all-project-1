@@ -40,7 +40,7 @@ class Board:
                 self.print_devider()
 
     def clear(self):
-        if osname == "nt": # check if the os is windows
+        if osname is "nt": # check if the os is windows
             system("cls")
         else:
             system("clear")
