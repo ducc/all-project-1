@@ -1,5 +1,5 @@
 # all-project-1
-Multiplayer tic-tac-toe!
+University multiplayer tic-tac-toe project!
 
 ## Running
 1. Install Python 3
@@ -10,3 +10,9 @@ Multiplayer tic-tac-toe!
 
 ### Server
 SOON
+
+### License
+All rights reserved.
+
+### Contributing
+No thank you!
