@@ -1,3 +1,5 @@
+"""Runs the game client"""
+
 from Board import Board
 from Game import Game
 
