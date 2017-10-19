@@ -60,13 +60,14 @@ class Game:
                 print("tile is out of bounds!")
                 chosen_tile = self.ask_for_tile()
 
-            self.board.set_tile(chosen_tile - 1, self.players[self.current_player])
+            player = self.players[self.current_player]
+            self.board.set_tile(chosen_tile - 1, player)
             
             self.board.clear()
             self.board.draw()
 
             if self.check_if_won():
-                print("you won!! :)")
+                print("Player " + player + " won!")
                 break
             
             self.choose_next_player()
