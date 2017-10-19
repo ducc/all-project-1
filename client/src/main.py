@@ -1,7 +1,7 @@
 """Runs the game client"""
 
-from Board import Board
-from Game import Game
+from board import Board
+from game import Game
 
 BOARD = Board()
 PLAYERS = ['X', 'O']
