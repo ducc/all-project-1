@@ -1,7 +1,11 @@
+"""Handles the "screen" of a game"""
+
 import os
 
 
 class Board:
+    """Represents a tic-tac-toe board"""
+
     SIZE = 3
 
     def __init__(self):
