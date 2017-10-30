@@ -1,7 +1,7 @@
 import asyncio
 
 # represents a connection
-class ConnectionProtocol(asyncio.Protocol):
+class ConnectionHandler(asyncio.Protocol):
     def connection_made(self, transport):
         # get the remote address to which the socket is connected
         remote_addr = transport.get_extra_info("peername")
@@ -21,8 +21,8 @@ class ConnectionProtocol(asyncio.Protocol):
 # creating a new asyncio event loop
 loop = asyncio.get_event_loop()
 
-# create the server - each connection creates a new ConnectionProtocol instance
-coro = loop.create_server(ConnectionProtocol, "127.0.0.1", 12345)
+# create the server - each connection creates a new ConnectionHandler instance
+coro = loop.create_server(ConnectionHandler, "127.0.0.1", 12345)
 
 # creates a task on the event loop to run coro until it has completed
 server = loop.run_until_complete(coro)

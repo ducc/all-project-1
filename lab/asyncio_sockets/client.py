@@ -1,6 +1,6 @@
 import asyncio
 
-class ConnectionProtocol(asyncio.Protocol):
+class ConnectionHandler(asyncio.Protocol):
     def __init__(self, message, loop):
         self.message = message
         self.loop = loop
@@ -18,7 +18,7 @@ class ConnectionProtocol(asyncio.Protocol):
         self.loop.stop()
 
 loop = asyncio.get_event_loop()
-coro = loop.create_connection(lambda: ConnectionProtocol("Hello World!", loop), "127.0.0.1", 12345)
+coro = loop.create_connection(lambda: ConnectionHandler("Hello World!", loop), "127.0.0.1", 12345)
 
 loop.run_until_complete(coro)
 loop.run_forever()
